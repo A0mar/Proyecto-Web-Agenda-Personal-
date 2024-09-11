@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ignacio, Omar, Pablo Alberto">
+    <link rel="shortcut icon" href="recursos/favicon.png" type="image/x-icon">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <header>
+			<section id="title">
+				<h1>Página Principal</h1>
+			</section>
+      <nav>
+				<a href="index.html"><img src="recursos/home.png"></a>
+        <a href="pags/calen.html">Calendario Mensual |</a>
+        <a href="pags/planificacion.html">Planificación Semanal |</a>
+        <a href="pags/lista.html">Lista de Tareas |</a>
+        <a href="pags/bitacora.html">Bitácora</a>
+      </nav>
+    </header>
+    <main>
+      <form onsubmit="return ValFormIndex();" action="javascript:ValFormIndex();" method="post">
+        <label for="nombre">Nombre de usuario:</label><br>
+        <input type="text" name="nombre" id="nombre" required class="input-text" class="obligatorio">
+        </br></br>
+        <label for="email">Correo electrónico</label></br>
+        <input type="email" name="email" id="email" required class="input-text" class="obligatorio">
+        </br></br>
+        <label for="estCivil">Estado civil</label>
+        </br>
+        <input type="radio" name="estCivil" id="soltero" value="soltero" checked><label for="soltero">Soltero</label>
+        </br>
+        <input type="radio" name="estCivil" id="casado" value="casado"><label for="casado">Casado</label>
+        </br></br>
+        <label for="clave">Clave</label></br>
+        <input type="password" name="clave" id="calve" required class="input-text" class="obligatorio">
+        </br></br>
+        <label for="tlf">Teléfono</label></br>
+        <input type="tel" name="tlf" id="tlf" class="input-text">
+        </br></br>
+        <label for="hora">Hora de acceso: <span id="hora"></span></label></br>
+        <script>
+					var fecha = new Date(); // Obtenemos la fecha actual
+					var hora = fecha.toLocaleTimeString(); // Obtenemos la hora actual en formato local
+					document.getElementById('hora').textContent = hora; // Actualizamos el contenido del elemento con el id 'hora'
+				</script>
+        </br></br>
+        <label for="mes">Mes:</label></br>
+        <input type="text" name="mes" id="mes" class="input-text">
+        </br></br>
+        <label for="motivo">Motivo de acceso:</label></br>
+        <input type="checkbox" name="motivo" id="cita"><label for="cita">Registrar cita en calendario</label></br>
+        <input type="checkbox" name="motivo" id="tarea"><label for="tarea">Anotar tarea pendiente</label></br>
+        <input type="checkbox" name="motivo" id="planificacion"><label for="planificacion">Anotar planificación semanal</label></br>
+        <input type="checkbox" name="motivo" id="otros"><label for="otros">Otros</label>
+        </br></br>
+        <label for="telefono">Observaciones</label></br>
+        <textarea name="observaciones" id="observaciones" cols="30" rows="10" class="input-text"></textarea>
+        </br></br>
+        <label for="enlace">Enlaces a paginas externas</label></br>
+        <input type="text" name="enlace" id="enlace" class="input-text">
+        <br></br>
+        <label for="condiciones">Condiciones de Acceso</label></br>
+        <input type="radio" name="condiciones" id="condiciones" checked><label for="aceptar">Aceptar</label></br>
+        <input type="radio" name="condiciones" id="condiciones"><label for="rechazar">Rechazar</label>
+        </br></br>
+        <input type="submit" value="Enviar" class="boton">
+        <input type="reset" value="Limpiar" class="boton">
+      </form>
+    </main>
+    <footer>
+
+        <a href="pags/contacto.html" target="_blank">Contacto |</a>
+        <a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca |</a>
+        <a href="mailto:ignacio.rodriguez23@educa.madrid.org">Ignacio |</a>
+        <a href="mailto:omar.alonso1@educa.madrid.org">Omar |</a>
+        <a href="mailto:pablo.ramirez31@educa.madrid.org">Pablo Alberto</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Ignacio, Omar, Pablo Alberto">
+		<link rel="shortcut icon" href="../recursos/favicon.png" type="image/x-icon">
+		<title>Bitácora</title>
+		<link rel="stylesheet" href="../css/bitacora.css" />
+		<script src="../js/bitacora.js"></script>
+	
+	</head>
+
+	<body>
+		<header>
+			<h1>Bitácora</h1>
+			<nav>
+				<a href="../index.html"><img src="../recursos/home.png" alt=""></a>
+				<a href="../index.html">Inicio |</a>
+				<a href="calen.html">Clanedario Mensual |</a>
+				<a href="planificacion.html">Planificación Semanal |</a>
+				<a href="lista.html">Lista de Tareas</a>
+			</nav>
+		</header>
+
+		<main>
+			<section>
+				<form>
+					<label for="objetivos">Objetivos del dia</label><br>
+					<input type="text" name="objetivos" id="objetivos" class="input-text">
+					<br><br>
+					<label for="recordatorio">¿Que no debo olvidar?</label><br>
+					<textarea name="recordatorio" id="recordatorio" cols="50" rows="5" class="input-text"></textarea><br>
+					<br><br>
+					<label for="estado">¿Como me siento por la mañana?</label><br>
+					<input type="range" name="estado" id="estado" max="5" min="1" value="1" onchange="mostrarValorRango1()">
+					<p id="valor-estado">1</p>
+					
+					<label for="preocupaciones">¿Que me preocupa?</label><br>
+					<textarea name="preocupaciones" id="preocupaciones" cols="50" rows="5" class="input-text"></textarea>
+					<br><br>
+					<label for="notas">Notas</label><br>
+					<textarea name="notas" id="notas" cols="50" rows="5" class="input-text"></textarea>
+					<br><br>
+					<label for="cumplidos">Objetivos cumplidos al final del dia</label><br>
+					<div id="checkboxes"></div>
+					<script>
+						let i = 0;
+
+						function agregarCheckbox() {
+							let objetivos = document.getElementById("objetivos").value;
+							i++;
+							let checkbox = document.createElement('input');
+							checkbox.type = "checkbox";
+							checkbox.name = "cumplidos";
+							checkbox.id = "checkbox-" + i;
+							let label = document.createElement('label');
+							label.htmlFor = "checkbox-" + i;
+							label.appendChild(document.createTextNode(objetivos));
+							let div = document.getElementById('checkboxes');
+							div.appendChild(checkbox);
+							div.appendChild(label);
+							div.appendChild(document.createElement('br'));
+						}
+
+						agregarCheckbox();
+						document.getElementById("objetivos").addEventListener("change", agregarCheckbox);
+					</script>
+					<br><br>
+					<label for="estadoNoche">Cómo me siento por la noche</label><br>
+					<input type="range" name="estadoNoche" id="estadoNoche" max="5" min="1" value="1" onchange="mostrarValorRango2()"><br>
+					<p id="valor-estadoNoche">1</p>
+					
+					<label for="mejor">¿Que es lo mejor que me ha pasado durante le día?</label><br>
+					<textarea name="mejor" id="mejor" cols="50" rows="5" class="input-text"></textarea>
+					<br><br>
+					<label for="peor">¿Que es lo peor que me ha pasado durante el día?</label><br>
+					<textarea name="peor" id="peor" cols="50" rows="5" class="input-text"></textarea>
+					<br><br>
+					<input type="submit" value="Guardar" class="boton">
+					<input type="reset" value="Borrar" class="boton">
+					<br><br><br><br><br>
+				</form>
+			</section>
+		</main>
+
+		<footer>
+			<a href="contacto.html" target="_blank">Contacto |</a>
+			<a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca |</a>
+			<a href="mailto:ignacio.rodriguez23@educa.madrid.org">Ignacio |</a>
+			<a href="mailto:omar.alonso1@educa.madrid.org">Omar |</a>
+			<a href="mailto:pablo.ramirez31@educa.madrid.org">Pablo Alberto</a>
+		</footer>
+	</body>
+</html>

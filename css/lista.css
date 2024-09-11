@@ -1,0 +1,145 @@
+/*Autor Omar Pablo Ignacio*/
+
+* {
+    box-sizing: border-box;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(32, 32, 32);
+    color: whitesmoke;
+  }
+  
+  /* Definir el contenedor del grid */
+  body {
+    display: grid;
+    grid-template-rows: auto auto 1fr; /* 3 filas */
+  }
+  
+  /* Estilos del header */
+  header {
+    background-color:#5d9a9d ;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos del nav */
+  nav {
+    background-color: #5d9a9d;
+    color: white;
+    padding: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+        margin: 0%;
+        padding: 0%;
+    }
+  
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+        margin: 0%;
+        padding: 0%;
+    }
+    
+
+
+  /* Estilos del main */
+  main {
+    padding: 150px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos de la tabla */
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  td {
+    border: 1px solid black;
+    padding: 10px; 
+  }
+  #domin{ 
+    color:  #2c3e50;
+  }
+
+  /* Estilos del footer */
+  footer {
+    background-color: #5d9a9d ;
+    color: gray;
+    padding: 20px;
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+
+
+section {
+    max-width: 600px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #A4C5C6;
+    color: #000;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+}
+
+button {
+ 
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    transition: background-color .5s;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+ul {
+    text-align: left;
+}
+
+ul li {
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: firebrick;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+}
+

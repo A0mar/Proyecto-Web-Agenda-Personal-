@@ -1,0 +1,74 @@
+/*Autor Omar Pablo Ignacio*/
+
+body {
+	font-family: Arial, sans-serif;
+	
+	background-color: rgb(32, 32, 32);
+	color: whitesmoke;
+	margin: 0px;
+}
+
+
+header {
+	background-color: #5d9a9d ;
+	color: white;
+	padding: 20px;
+	margin: 0px;
+	text-align: center;
+}
+
+img {
+	width: 20px;
+  height: 20px;
+}
+
+nav {
+	color: white;
+	padding: 0px;
+}
+
+main {
+	padding: 20px;
+	max-width: 800px;
+
+}
+
+footer {
+	background-color: #5d9a9d;
+	color: white;
+	padding: 10px;
+	position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+h1 {
+	font-size: xx-large;
+	margin: 0%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: large;
+	margin: 0%;
+	padding: 0%;
+}
+
+form {
+	margin-left: 20%;
+}
+
+label {
+	padding-left: 5px;
+}
+
+.input-text {
+	border-radius: 10px;
+	padding-left: 5px;
+}
+
+.boton {
+	border-radius: 10px;
+}
